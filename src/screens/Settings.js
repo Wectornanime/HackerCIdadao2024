@@ -85,10 +85,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         gap: 5,
+        backgroundColor: '#c9c9c9',
+        padding: 5,
+        borderRadius: 15,
+        marginTop: 10,
     },
     settingContainer: {
         gap: 10,
-        marginTop: 25
+        marginTop: 25,
+        backgroundColor: '#c9c9c9',
+        padding: 5,
+        borderRadius: 15,
     },
     settingLine: {
         flexDirection: 'row',
