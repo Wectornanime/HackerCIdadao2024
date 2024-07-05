@@ -82,6 +82,10 @@ npm install
 
 Acesse o arquivo `Report.js` e procure por `apiUrl`, troque pelo ip do seu backend.
 
+### Troque a string de conexão com o banco de dados:
+
+Acesse o arquivo `index.js` e procure por `mongoose.connect`, troque pela sua string de conexão com o banco mongo.
+
 ### Rode a aplicação em modo de desenvolvimento:
 
 Para rodar a aplicação em modo de desenvolvimento, execute o seguinte comando para o back e o mobile:
