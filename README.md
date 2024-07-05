@@ -37,6 +37,8 @@ Ela tambem mostra para a prefeitura um modelo 3D de cada barreira, esse modelo �
 
 ✔️ Enviar a localização da ocorrência.
 
+✔️ Listar pontos de risco no mapa.
+
 ## Pré-requisitos ✅
 
 ⚠️ [Node Js](https://nodejs.org/en/download/)
