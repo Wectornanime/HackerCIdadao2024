@@ -1,6 +1,9 @@
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
+
+    const doLogin = () => navigation.navigate('Main');
+
     return (
         <View style={styles.container}>
             <View style={{ height: '50%', justifyContent: 'center', alignItems: 'center' }}>
@@ -28,6 +31,7 @@ export default function LoginScreen() {
 
                     <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity
+                            onPress={() => doLogin()}
                             style={{ backgroundColor: '#095207', paddingHorizontal: 14, paddingVertical: 8, borderRadius: 15 }}
                         >
                             <Text style={{ color: '#fff', fontSize: 16, fontWeight: '500' }}>Entrar</Text>
@@ -35,7 +39,9 @@ export default function LoginScreen() {
 
                         <Text style={styles.text}>ou</Text>
 
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => doLogin()}
+                        >
                             <Image
                                 source={require('./../../assets/images/gov_br.png')}
                                 style={{ width: 75, height: 27 }}
@@ -45,7 +51,9 @@ export default function LoginScreen() {
                 </View>
 
                 <View style={{ alignItems: 'center' }}>
-                    <TouchableOpacity                    >
+                    <TouchableOpacity
+                        onPress={() => doLogin()}
+                    >
                         <Text style={{ color: '#2A1FA4', fontSize: 16, fontWeight: '500' }}>Cadastrar</Text>
                     </TouchableOpacity>
                 </View>
