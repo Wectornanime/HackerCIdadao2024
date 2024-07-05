@@ -8,8 +8,20 @@ const Drawer = createDrawerNavigator();
 export default function DrawerRouter() {
     return (
         <Drawer.Navigator>
-            <Drawer.Screen name="Home" component={HomeScreen} />
-            <Drawer.Screen name="Settings" component={Settings} />
+            <Drawer.Screen
+                name="home"
+                component={HomeScreen}
+                options={{
+                    title: "Mapa"
+                }}
+            />
+            <Drawer.Screen
+                name="settings"
+                component={Settings}
+                options={{
+                    title: "Configurações"
+                }}
+            />
         </Drawer.Navigator>
     )
 }
