@@ -9,7 +9,7 @@ export default function LoginScreen({ navigation }) {
             <View style={{ height: '50%', justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                     source={require('./../../assets/images/hera.png')}
-                    style={{ marginTop: 10, width: 200, height: 200 }}
+                    style={{ marginTop: 10, width: 270, height: 270 }}
                 />
             </View>
 

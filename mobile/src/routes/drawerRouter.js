@@ -2,6 +2,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import HomeScreen from "../screens/HomeScreen";
 import Settings from "../screens/Settings";
+import Report from "../screens/Report";
 
 const Drawer = createDrawerNavigator();
 
@@ -20,6 +21,13 @@ export default function DrawerRouter() {
                 component={Settings}
                 options={{
                     title: "Configurações"
+                }}
+            />
+            <Drawer.Screen
+                name="report"
+                component={Report}
+                options={{
+                    title: "Reportar"
                 }}
             />
         </Drawer.Navigator>
