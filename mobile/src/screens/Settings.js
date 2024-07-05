@@ -1,8 +1,8 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
-import { Image, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 
-export default function Settings() {
+export default function Settings({ navigation }) {
     const [isEnabledNotifications, setIsEnabledNotifications] = useState(true);
     const [isEnabledArea, setIsEnabledArea] = useState(true);
 
@@ -62,6 +62,17 @@ export default function Settings() {
                     />
                 </View>
             </View>
+
+            <View style={{ marginTop: 15, width: '100%', alignItems: 'center' }}
+            >
+                <TouchableOpacity
+                    style={{ ...styles.actionButton, backgroundColor: '#B22B18' }}
+                    onPress={() => navigation.navigate('Login')}
+                >
+                    <Text style={{ color: '#fff', fontSize: 14, fontWeight: '900' }}>Sair</Text>
+                </TouchableOpacity>
+            </View>
+
         </ScrollView>
     );
 }
@@ -85,7 +96,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         gap: 5,
-        backgroundColor: '#c9c9c9',
+        backgroundColor: '#EFEFEF',
         padding: 5,
         borderRadius: 15,
         marginTop: 10,
@@ -93,7 +104,7 @@ const styles = StyleSheet.create({
     settingContainer: {
         gap: 10,
         marginTop: 25,
-        backgroundColor: '#c9c9c9',
+        backgroundColor: '#EFEFEF',
         padding: 5,
         borderRadius: 15,
     },
@@ -109,5 +120,13 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20,
+    },
+    actionButton: {
+        paddingHorizontal: 14,
+        paddingVertical: 8,
+        borderRadius: 15,
+        padding: 5,
+        alignItems: 'center',
+        width: '45%',
     },
 });

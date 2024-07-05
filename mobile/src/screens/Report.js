@@ -92,6 +92,7 @@ export default function Report({ navigation }) {
                 console.log(response.data);
                 Alert.alert('Sucesso', response.data.message);
                 setMessage('');
+                setImageUri(null)
                 navigation.navigate('home');
             } else {
                 console.error(error);
@@ -110,7 +111,7 @@ export default function Report({ navigation }) {
                 <View style={{ width: '100%', alignItems: 'flex-start', justifyContent: 'flex-start' }}>
                     <Text style={styles.title}>Titulo </Text>
                     <TextInput
-                        style={{ fontSize: 18, backgroundColor: '#d9d9d9d9', paddingHorizontal: 4, borderRadius: 4, width: '100%' }}
+                        style={{ fontSize: 18, backgroundColor: '#EFEFEF', paddingHorizontal: 4, borderRadius: 4, width: '100%' }}
                         value={name}
                         onChangeText={text => setName(text)}
                     />
@@ -134,7 +135,7 @@ export default function Report({ navigation }) {
                         style={{
                             width: 200,
                             height: 200,
-                            backgroundColor: '#d9d9d9',
+                            backgroundColor: '#EFEFEF',
                             marginVertical: 5,
                             justifyContent: 'center',
                             alignItems: 'center',
@@ -186,7 +187,7 @@ export default function Report({ navigation }) {
                         style={{
                             width: '100%',
                             height: 300,
-                            backgroundColor: '#d9d9d9',
+                            backgroundColor: '#EFEFEF',
                             justifyContent: 'center',
                             alignItems: 'center'
                         }}
@@ -197,17 +198,17 @@ export default function Report({ navigation }) {
                 )}
 
                 <TouchableOpacity
-                    style={{ ...styles.actionButton, backgroundColor: '#B0E0AC' }}
+                    style={{ ...styles.actionButton, backgroundColor: '#171944' }}
                     onPress={handleSend}
                 >
-                    <Text>Enviar</Text>
+                    <Text style={{ color: '#fff', fontSize: 16, fontWeight: '900' }}>Enviar</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={{ ...styles.actionButton, backgroundColor: '#FFB9B9' }}
+                    style={{ ...styles.actionButton, backgroundColor: '#B22B18' }}
                     onPress={() => navigation.navigate('home')}
                 >
-                    <Text>Cancelar</Text>
+                    <Text style={{ color: '#fff', fontSize: 16, fontWeight: '900' }}>Cancelar</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>
@@ -229,7 +230,7 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     input: {
-        backgroundColor: '#d9d9d9',
+        backgroundColor: '#EFEFEF',
         minWidth: '100%',
         borderRadius: 5,
         padding: 10,
@@ -253,7 +254,9 @@ const styles = StyleSheet.create({
         height: 60,
     },
     actionButton: {
-        borderRadius: 5,
+        paddingHorizontal: 14,
+        paddingVertical: 8,
+        borderRadius: 15,
         padding: 5,
         alignItems: 'center',
         width: '45%',
