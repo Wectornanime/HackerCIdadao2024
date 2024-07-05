@@ -31,9 +31,7 @@ Ela tambem mostra para a prefeitura um modelo 3D de cada barreira, esse modelo �
 
 ## Funcionalidades 🛠️
 
-✔️ Registar, ler, deletar ocorrências.
-
-✔️ Atualizar o status das ocorrências.
+✔️ Registar ocorrências.
 
 ✔️ Anexar imagem à ocorrência.
 
